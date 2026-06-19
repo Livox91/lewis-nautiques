@@ -1,0 +1,81 @@
+import type { Config } from 'tailwindcss';
+
+export default {
+  content: ['./index.html', './src/**/*.{ts,tsx}'],
+  darkMode: 'class',
+  theme: {
+    extend: {
+      colors: {
+        'on-primary-container': '#7587a0',
+        'surface-container': '#1f201e',
+        'secondary-container': '#424a52',
+        'on-surface-variant': '#c4c6cd',
+        'on-background': '#e3e2df',
+        'primary-container': '#0b1f33',
+        'error-container': '#93000a',
+        'surface-bright': '#383938',
+        'surface-container-lowest': '#0d0f0d',
+        outline: '#8e9197',
+        tertiary: '#d6c5a1',
+        'surface-container-highest': '#343533',
+        'on-secondary': '#293138',
+        'surface-variant': '#343533',
+        secondary: '#bfc7d0',
+        'on-primary': '#1f3246',
+        'on-error': '#690005',
+        'on-tertiary-container': '#948464',
+        'on-surface': '#e3e2df',
+        'inverse-primary': '#4e6077',
+        surface: '#121412',
+        'surface-container-high': '#292a29',
+        'outline-variant': '#44474c',
+        'inverse-surface': '#e3e2df',
+        primary: '#b5c8e3',
+        error: '#ffb4ab',
+        'on-secondary-container': '#b1b9c2',
+        'surface-container-low': '#1a1c1a',
+        background: '#121412',
+        'on-error-container': '#ffdad6',
+        'tertiary-container': '#261d06',
+      },
+      fontFamily: {
+        serif: ['"Playfair Display"', 'Georgia', 'serif'],
+        sans: ['Inter', 'system-ui', 'sans-serif'],
+      },
+      fontSize: {
+        'display-lg': ['64px', { lineHeight: '72px', letterSpacing: '-0.02em', fontWeight: '700' }],
+        'display-mobile': ['40px', { lineHeight: '48px', letterSpacing: '-0.01em', fontWeight: '700' }],
+        'headline-md': ['32px', { lineHeight: '40px', fontWeight: '600' }],
+        'headline-sm': ['24px', { lineHeight: '32px', fontWeight: '500' }],
+        'body-lg': ['18px', { lineHeight: '28px', fontWeight: '400' }],
+        'body-md': ['16px', { lineHeight: '24px', fontWeight: '400' }],
+        'label-caps': ['12px', { lineHeight: '16px', letterSpacing: '0.1em', fontWeight: '600' }],
+        'mono-data': ['14px', { lineHeight: '20px', letterSpacing: '0.05em', fontWeight: '500' }],
+      },
+      spacing: {
+        'section-desktop': '120px',
+        'section-mobile': '64px',
+        gutter: '24px',
+      },
+      maxWidth: {
+        container: '1440px',
+      },
+      animation: {
+        'fade-up': 'fadeUp 0.8s ease-out forwards',
+        'fade-in': 'fadeIn 1s ease-out forwards',
+        'bounce-slow': 'bounce 2.5s infinite',
+      },
+      keyframes: {
+        fadeUp: {
+          from: { opacity: '0', transform: 'translateY(30px)' },
+          to: { opacity: '1', transform: 'translateY(0)' },
+        },
+        fadeIn: {
+          from: { opacity: '0' },
+          to: { opacity: '1' },
+        },
+      },
+    },
+  },
+  plugins: [],
+} satisfies Config;
